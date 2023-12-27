@@ -1,7 +1,8 @@
-const http = require('http') 
-
+const http = require('http')
+const fs = require('fs')
+const html = fs.readFileSync('./Template/index.html', 'utf-8')
 const server = http.createServer((req, res) => {
-    res.end("<h1> THis is header</h1>");
+    res.end(html);
     console.log("A new request received!");
 
 
